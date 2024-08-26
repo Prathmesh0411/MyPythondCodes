@@ -16,10 +16,15 @@ for i in range(0,degree_of_matrix):
         a.append(element)
     matrix1.append(a)
 
-for i in range(0,rows):
+for element in range(rows):
+    print(matrix1[element])
+
+
+
+"""for i in range(0,rows):
     for j in range(0,columns):
         print(matrix1[i][j],end=" ")
-    print()
+    print()"""
 
 matrix2 =[]
 degree_of_matrix2 = int(input("enter the degree of matrix: "))
@@ -32,7 +37,13 @@ for i in range(0,degree_of_matrix2):
         a.append(element)
     matrix2.append(a)
 
-for i in range(0,rows):
+"""for i in range(0,rows):
     for j in range(0,columns):
         print(matrix2[i][j],end=" ")
-    print()
+    print()"""
+
+for element in range(rows):
+    print(matrix2[element])
+
+
+    
