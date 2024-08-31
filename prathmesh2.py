@@ -61,14 +61,14 @@ for i in range(numberofstudents):
     marks=int(input("Enter marks of student "+str(i+1)+" : "))
     marksinFDS.append(marks)
 
+print("\n\n--------------------MENU--------------------\n")
+print("1. Total and Average Marks of the Class")
+print("2. Highest and Lowest Marks in the Class")
+print("3. Number of Students absent for the test")
+print("4. Marks with Highest Frequency")
+
 flag=1
 while flag==1:
-    print("\n\n--------------------MENU--------------------\n")
-    print("1. Total and Average Marks of the Class")
-    print("2. Highest and Lowest Marks in the Class")
-    print("3. Number of Students absent for the test")
-    print("4. Marks with Highest Frequency")
-
     ch=int(input("Enter your Choice (from 1 to 5) :"))
 
     if ch==1:
