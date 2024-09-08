@@ -20,16 +20,28 @@ def subtracton(rows,columns,matrix1,matrix2):
         matrix.append(row)
     print(matrix)
 
-def multiplication(rows,columns,matrix1,matrix2):
-    print('multiplication of the matrix is:')
-    matrix=[]
-    for columns in range(0,degree_of_matrix):
-        row =[]
-        for rows in range(0,degree_of_matrix):
-            n=matrix1[columns][rows] - matrix2[columns][rows]
+def multiplication(rows, columns, matrix1, matrix2):
+    print('Multiplication of the matrix is:')
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(columns):
+            n = 0
+            for k in range(columns):
+                n += matrix1[i][k] * matrix2[k][j]
             row.append(n)
         matrix.append(row)
-    print(matrix)
+    return matrix
+
+def transpose(matrix, rows, columns):
+    print('Transpose of the matrix is:')
+    transposed = []
+    for i in range(columns):
+        row = []
+        for j in range(rows):
+            row.append(matrix[j][i])
+        transposed.append(row)
+    return transposed
 
 matrix1 =[]
 degree_of_matrix = int(input("enter the degree of matrix: "))
