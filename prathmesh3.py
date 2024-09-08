@@ -58,12 +58,6 @@ for element in range(rows):
     print(matrix1[element])
 
 
-
-"""for i in range(0,rows):
-    for j in range(0,columns):
-        print(matrix1[i][j],end=" ")
-    print()"""
-
 matrix2 =[]
 degree_of_matrix2 = int(input("enter the degree of matrix: "))
 rows = int(input("Enter the no. of rows: "))
@@ -75,12 +69,59 @@ for i in range(0,degree_of_matrix2):
         a.append(element)
     matrix2.append(a)
 
-"""for i in range(0,rows):
-    for j in range(0,columns):
-        print(matrix2[i][j],end=" ")
-    print()"""
-
 for element in range(rows):
     print(matrix2[element])
 
-print(addition(rows,columns,matrix1,matrix2))
+
+print("\n\n--------------------MENU--------------------\n")
+print("1.Addition of two matrices:")
+print("2.Subtraction of two matrices:")
+print("3.Multiplication of two matrices:")
+print("Transpose of matrix:")
+
+flag=1
+while flag==1:
+    ch=int(input("Enter your Choice (from 1 to 5) :"))
+
+    if ch==1:
+         print(addition(rows,columns,matrix1,matrix2))
+        a = input("Do you want to continue (yes/no) :")
+        if a == "yes":
+            flag = 1
+        else:
+            flag = 0
+            print("Thanks for using this program!")
+
+    elif ch==2:
+        print(subtraction (rows,columns,matrix1,matrix2))
+        a = input("Do you want to continue (yes/no) :")
+        if a == "yes":
+            flag = 1
+        else:
+            flag = 0
+            print("Thanks for using this program!")
+
+    elif ch==3:
+        print(multiplication (rows,columns,matrix1,matrix2))
+        a = input("Do you want to continue (yes/no) :")
+        if a == "yes":
+            flag = 1
+        else:
+            flag = 0
+            print("Thanks for using this program!")
+
+    elif ch==4:
+        print(transpose(matrix,rows,columns))
+        a = input("Do you want to continue (yes/no) :")
+        if a == "yes":
+            flag = 1
+        else:
+            flag = 0
+            print("Thanks for using this program!")
+
+    elif ch==5:
+        flag=0
+        print("Thanks for using this program!")
+
+    else:
+          print("Enter the correct number")
