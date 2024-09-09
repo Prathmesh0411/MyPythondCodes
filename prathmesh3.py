@@ -34,15 +34,15 @@ def multiplication(rows, columns, matrix1, matrix2):
 
 def transpose(matrix, rows, columns):
     print('Transpose of the matrix is:')
-    transposed = []
+    t = []
     for i in range(columns):
         row = []
         for j in range(rows):
             n= matrix[i][j]
             matrix[j][i] = n
             matrix.append(
-        transposed.append(row)
-    return transposed
+        t.append(row)
+    return t
 
 matrix1 =[]
 degree_of_matrix = int(input("enter the degree of matrix: "))
