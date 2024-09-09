@@ -26,9 +26,8 @@ def multiplication(rows, columns, matrix1, matrix2):
     for i in range(rows):
         row = []
         for j in range(columns):
-            n = 0
             for k in range(columns):
-                n += matrix1[i][k] * matrix2[k][j]
+                n=matrix1[i][k] * matrix2[k][j]
             row.append(n)
         matrix.append(row)
     return matrix
@@ -39,7 +38,9 @@ def transpose(matrix, rows, columns):
     for i in range(columns):
         row = []
         for j in range(rows):
-            row.append(matrix[j][i])
+            n= matrix[i][j]
+            matrix[j][i] = n
+            matrix.append(
         transposed.append(row)
     return transposed
 
@@ -111,7 +112,7 @@ while flag==1:
             print("Thanks for using this program!")
 
     elif ch==4:
-        print(transpose(matrix,rows,columns))
+        print(transpose(matrix1,rows,columns))
         a = input("Do you want to continue (yes/no) :")
         if a == "yes":
             flag = 1
