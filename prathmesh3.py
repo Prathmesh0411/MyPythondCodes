@@ -38,9 +38,7 @@ def transpose(matrix, rows, columns):
     for i in range(columns):
         row = []
         for j in range(rows):
-            n= matrix[i][j]
-            matrix[j][i] = n
-            matrix.append(
+            row.append(matrix[j][i])
         t.append(row)
     return t
 
